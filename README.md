@@ -12,16 +12,25 @@ Whether you are a **beginner** exploring NLP or a **researcher** building produc
 Hugging Face is an open-source AI company and community platform that builds tools, libraries, and datasets to make **Natural Language Processing (NLP)**, **Computer Vision**, **Speech**, and other AI fields more accessible.  
 
 **🔹 Key Components**
+
 **Transformers Library**
+
 Python library (transformers) with 100,000+ pretrained models (BERT, GPT, T5, LLaMA, etc.).
 Allows easy use of state-of-the-art NLP, vision, and speech models.
+
 **Datasets Library**
+
 Provides thousands of ready-to-use datasets for training/testing models.
 **Tokenizers**
+
 Super-fast text tokenization (built in Rust)
+
 **Hugging Face Hub**
+
 A central place (like GitHub for AI models) where people upload and download models/datasets
+
 **Spaces**
+
 Free hosting for ML demos (using Gradio or Streamlit).
 
 
@@ -48,64 +57,67 @@ output code
 🔹 Step 1: Create a Conda Environment
 It’s a good practice to keep Hugging Face in a separate environment:
 
-bash
-Copy code
+```bash
 conda create -n hf_pipelines python=3.10 -y
 conda activate hf_pipelines
+```
 🔹 Step 2: Install Hugging Face Libraries
 Install the core libraries:
 
-bash
-Copy code
+```bash
 pip install transformers datasets huggingface_hub
 For GPU (PyTorch CUDA):
+```
+```bash
 
-bash
-Copy code
 pip install torch --extra-index-url https://download.pytorch.org/whl/cu118
+```
 For TensorFlow users:
 
-bash
-Copy code
+```bash
 pip install tensorflow
+```
 For audio pipelines:
 
-bash
-Copy code
+```bash
+
 pip install librosa soundfile
+```
 For vision pipelines:
 
-bash
-Copy code
+```bash
+
 pip install pillow opencv-python
+```
 🔹 Step 3: Verify Installation
 Run:
 
-python
-Copy code
+```python
 from transformers import pipeline
 print(pipeline("sentiment-analysis")("I love AI!"))
 If it outputs a POSITIVE/NEGATIVE label, installation is successful ✅.
-
+```
 ## 📊 3. Pipeline Parameters (General)
 Every Hugging Face pipeline supports common parameters:
 
-Category	Parameter	Description
-Model	model	Model identifier or path
-tokenizer	Custom tokenizer instance
-device	-1 for CPU, 0+ for GPU
-framework	"pt" (PyTorch) / "tf" (TensorFlow)
-Processing	batch_size	Samples per batch
-truncation	Cut long sequences
-padding	Pad shorter sequences
-max_length	Max input length
-Generation	temperature	Randomness control
-top_k	Top-k sampling
-top_p	Nucleus sampling
-repetition_penalty	Penalize repeated tokens
-Output	return_all_scores	Return all scores
-aggregation_strategy	For NER tasks
-handle_impossible_answer	For QA tasks
+| Category    | Parameter              | Description                         |
+|-------------|------------------------|-------------------------------------|
+| **Model**   | `model`                | Model identifier or path            |
+|             | `tokenizer`            | Custom tokenizer instance           |
+|             | `device`               | `-1` for CPU, `0+` for GPU          |
+|             | `framework`            | `"pt"` (PyTorch) / `"tf"` (TensorFlow) |
+| **Processing** | `batch_size`        | Samples per batch                   |
+|             | `truncation`           | Cut long sequences                  |
+|             | `padding`              | Pad shorter sequences               |
+|             | `max_length`           | Max input length                    |
+| **Generation** | `temperature`       | Randomness control                  |
+|             | `top_k`                | Top-k sampling                      |
+|             | `top_p`                | Nucleus sampling                    |
+|             | `repetition_penalty`   | Penalize repeated tokens            |
+| **Output**  | `return_all_scores`    | Return all scores                   |
+|             | `aggregation_strategy` | For NER tasks                       |
+|             | `handle_impossible_answer` | For QA tasks                   |
+
 
 ## 📚 4. Pipelines
 Below we cover all 31 Hugging Face pipelines with:
