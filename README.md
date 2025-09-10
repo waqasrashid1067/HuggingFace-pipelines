@@ -139,7 +139,7 @@ Below we cover all 31 Hugging Face pipelines with:
 
 **Why**: Sentiment analysis, intent detection, moderation.
 
-Suggested Models:
+**Suggested Models**:
 
 distilbert-base-uncased-finetuned-sst-2-english → Fast, lightweight
 
