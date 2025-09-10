@@ -1,5 +1,3 @@
-
-
 from transformers import pipeline
 QuestionAnswering = pipeline("question-answering")
 QuestionAnswering(

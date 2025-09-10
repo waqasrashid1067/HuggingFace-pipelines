@@ -1,5 +1,9 @@
-from transformers import pipeline
+from transformers import pipeline  
+ner = pipeline(
+    "ner",
+    model="dslim/bert-base-NER",
+    aggregation_strategy="simple"
+)
 
-mask_gen = pipeline("mask-generation", model="facebook/sam-vit-base")
-out = mask_gen("https://huggingface.co/datasets/mishig/sample_images/resolve/main/horse.png")
-print(out[0]["mask"].size)
+text = "Hugging Face is based in New York and was founded by Julien on 18 oct 2022."
+print(ner(text))
