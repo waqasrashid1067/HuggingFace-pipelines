@@ -136,6 +136,7 @@ Below we cover all 31 Hugging Face pipelines with:
 
 ## 📝 1. Text Classification
 **What**: Assign label(s) to text (e.g., positive/negative).
+
 **Why**: Sentiment analysis, intent detection, moderation.
 
 Suggested Models:
@@ -165,6 +166,7 @@ print(results)
 ```
 ## 🎭 2. Token Classification (NER)
 **What**: Identify entities in text (names, locations, orgs).
+
 **Why**: Information extraction, knowledge graphs, search.
 
 Suggested Models:
@@ -192,6 +194,7 @@ print(ner(text))
 ```
 ## ❓ 3. Question Answering
 **What**: Extract answer span from context text.
+
 **Why**: Chatbots, document QA, search.
 
 Suggested Models:
@@ -218,6 +221,7 @@ print(qa(question=question, context=context, handle_impossible_answer=True))
 ```
 ## 🧩 4. Fill-Mask
 **What**: Predict masked word(s) in text.
+
 **Why**: Cloze tasks, word suggestion, data augmentation.
 
 Suggested Models:
@@ -239,6 +243,7 @@ print(fill("Hugging Face is creating <mask> for everyone."))
 ```
 ## 📖 5. Summarization
 **What**: Generate a shorter version of text.
+
 **Why**: Article/news summarization, reports.
 
 Suggested Models:
@@ -265,6 +270,7 @@ print(summarizer(text, max_length=40, min_length=10, do_sample=False))
 ```
 ## 🌍 6. Translation
 **What**: Translate text between languages.
+
 **Why**: Cross-lingual applications, chatbots, global reach.
 
 Suggested Models:
@@ -286,6 +292,7 @@ print(translator("I love Hugging Face!", max_length=40))
 ```
 ## 📰 7. Text Generation
 **What**: Generate free-form text.
+
 **Why**: Story generation, chatbots, creative writing.
 
 Suggested Models:
@@ -312,6 +319,7 @@ print(generator("Hugging Face is",
 ```
 ## 🔍 8. Feature Extraction
 **What**: Convert text into vector embeddings.
+
 **Why**: Semantic search, clustering, similarity.
 
 Suggested Models:
@@ -333,6 +341,7 @@ print(extractor("Hugging Face is awesome!", padding=True, truncation=True))
 ```
 ## 📊 9. Zero-Shot Classification
 **What**: Classify text into categories without training.
+
 **Why**: Quick prototyping, unseen label classification.
 
 Suggested Models:
@@ -357,6 +366,7 @@ print(zero(text, candidate_labels=labels))
 ```
 ## 🎬 10. Video Classification
 **What**: Classify videos into categories.
+
 **Why**: Activity recognition, moderation, recommendation.
 
 Suggested Models:
@@ -380,6 +390,7 @@ print(video_clf("example_video.mp4"))
 ## 🎨 11. Image Classification
 
 **What:** Assign labels to images.  
+
 **Why:** Object recognition, tagging, moderation.  
 
 **Suggested Models:**  
@@ -398,8 +409,9 @@ img_clf = pipeline("image-classification", model="google/vit-base-patch16-224")
 print(img_clf("example.jpg"))
 ```
 ## 🖼️ 12. Image Segmentation
-What: Classify each pixel in an image.
-Why: Medical imaging, scene parsing, AR/VR.
+**What**: Classify each pixel in an image.
+
+**Why**: Medical imaging, scene parsing, AR/VR.
 
 Suggested Models:
 
@@ -420,6 +432,7 @@ print(segmenter("example.jpg"))
 ```
 ## 🖼️➡️🖼️ 13. Image-to-Image
 **What**: Transform input image into another image.
+
 **Why**: Style transfer, image editing.
 
 Suggested Models:
@@ -441,6 +454,7 @@ print(img2img("input.png", prompt="Convert this into Van Gogh style"))
 ```
 ## 🖼️➡️📝 14. Image-to-Text (Captioning)
 **What**: Generate text description for images.
+
 **Why**: Accessibility, search, recommendation.
 
 Suggested Models:
@@ -462,6 +476,7 @@ print(captioner("example.jpg"))
 ```
 ## 🔑 15. Keypoint Matching
 **What**: Match keypoints between two images.
+
 **Why**: Object tracking, AR, 3D reconstruction.
 
 Suggested Models:
@@ -483,6 +498,7 @@ print(matcher({"image": "img1.jpg"}, {"image": "img2.jpg"}))
 ```
 ## 🎭 16. Mask Generation
 **What**: Predict masks for objects in images.
+
 **Why**: Object segmentation, image editing.
 
 Suggested Models:
@@ -504,6 +520,7 @@ print(masker("example.jpg"))
 ```
 ## 🎯 17. Object Detection
 **What**: Detect objects + bounding boxes in images.
+
 **Why**: Surveillance, self-driving cars, retail analytics.
 
 Suggested Models:
@@ -525,6 +542,7 @@ print(detector("example.jpg"))
 ```
 ## 🧠 18. Automatic Speech Recognition (ASR)
 **What**: Convert speech to text.
+
 **Why**: Transcription, voice assistants, accessibility.
 
 Suggested Models:
@@ -546,6 +564,7 @@ print(asr("example.wav"))
 ```
 ## 🎵 19. Audio Classification
 **What**: Classify audio into categories.
+
 **Why**: Music classification, environmental sounds.
 
 Suggested Models:
@@ -567,6 +586,7 @@ print(audio_clf("example.wav"))
 ```
 ## 🗣️ 20. Text-to-Speech (TTS)
 **What**: Convert text into spoken audio.
+
 **Why**: Voice assistants, accessibility, chatbots.
 
 Suggested Models:
@@ -592,6 +612,7 @@ with open("output.wav", "wb") as f:
 # 📊 21. Document Question Answering
 
 **What:** Answer questions from scanned docs/PDFs.  
+
 **Why:** Automating forms, contracts, receipts.  
 
 **Suggested Models:**  
@@ -609,6 +630,7 @@ print(docqa("invoice.pdf", question="What is the total amount?"))
 ```
 ## 📝 22. Text2Text Generation
 **What**: Convert one text into another (translation, rewriting).
+
 **Why**: Summarization, style transfer.
 
 Suggested Models:
@@ -630,6 +652,7 @@ print(t2t("Translate this text to French: Hello World"))
 ```
 ## 📖 23. Conversational AI
 **What**: Multi-turn dialogues with memory.
+
 **Why**: Chatbots, customer support.
 
 Suggested Models:
@@ -654,6 +677,7 @@ print(chatbot(conv))
 ```
 ## 🧾 24. Table Question Answering
 **What**: Answer questions about structured tables.
+
 **Why**: Data extraction, BI automation.
 
 Suggested Models:
@@ -675,6 +699,7 @@ print(tableqa(table={"Country":["France","Germany"],"Pop":[67,83]}, query="Which
 ```
 ## 🤖 25. Zero-Shot Image Classification
 **What**: Classify images without training examples.
+
 **Why**: Fast prototyping, open-vocab tasks.
 
 Suggested Models:
@@ -696,6 +721,7 @@ print(clip("dog.jpg", candidate_labels=["cat","dog","car"]))
 ```
 ## 🎤 26. Speaker Diarization
 **What**: Detect “who spoke when” in audio.
+
 **Why**: Meetings, transcription services.
 
 Suggested Models:
@@ -717,6 +743,7 @@ print(diarizer("meeting.wav"))
 ```
 ## 🧠 27. Feature Extraction
 **What**: Extract embeddings/vectors from text or images.
+
 **Why**: Semantic search, clustering, retrieval.
 
 Suggested Models:
@@ -738,6 +765,7 @@ print(extractor("Hugging Face is awesome!"))
 ```
 🧪 28. Fill-Mask (Masked Language Modeling)
 **What**: Predict missing words in a sentence.
+
 **Why**: Pretraining, cloze tests.
 
 Suggested Models:
@@ -759,6 +787,7 @@ print(masker("The capital of France is [MASK]."))
 ```
 ## 🗄️ 29. Sentence Similarity
 **What**: Compare similarity between two texts.
+
 **Why**: Search, recommendations, deduplication.
 
 Suggested Models:
@@ -780,6 +809,7 @@ print(sim("I love machine learning", "Deep learning is great"))
 ```
 ## ⚡ 30. Translation
 **What**: Translate text between languages.
+
 **Why**: Localization, multilingual apps.
 
 Suggested Models:
@@ -800,6 +830,7 @@ print(translator("Hello World", src="en", tgt="fr"))
 ```
 ## 🕵️ 31. Named Entity Recognition (NER)
 **What**: Extract entities (names, dates, places).
+
 **Why**: Information extraction, NLP pipelines.
 
 Suggested Models:
