@@ -1,5 +1,3 @@
-
-
 # 
 # out = tts("Hello, Hugging Face!")
 # with open("speech.wav", "wb") as f:
